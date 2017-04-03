@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <script src="game.js"></script>
+    <script src="winner-checker.js"></script>
+    <script src="historyModule.js"></script>
+</head>
+
+<body onload="gameModule.start();">
+    <div id="title_div">
+        <h1>Tic Tac Toe</h1>
+    </div>
+    <div id="control_div">
+        <table class="info">
+            <tr>
+                <th class="inf">Active player</th>
+                <th class="inf" id="activePlayer"></th>
+            </tr>
+            <tr>
+                <th class="inf">Active player in next turn</th>
+                <th class="inf" id="activePlayerNextTurn"></th>
+            </tr>
+        </table>
+        <table class="buttons">
+            <tr>
+                <th>
+                    <button onclick="gameModule.changePlayerNextTurn();">Change Player</button>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <button onclick="gameModule.reset();">Reset</button>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <div id="board_div">
+        <table class="board">
+            <tr>
+                <th class="cell" id="1" onclick="gameModule.draw(this);"></th>
+                <th class="cell" id="2" onclick="gameModule.draw(this);"></th>
+                <th class="cell" id="3" onclick="gameModule.draw(this);"></th>
+            </tr>
+            <tr>
+                <th class="cell" id="4" onclick="gameModule.draw(this);"></th>
+                <th class="cell" id="5" onclick="gameModule.draw(this);"></th>
+                <th class="cell" id="6" onclick="gameModule.draw(this);"></th>
+            </tr>
+            <tr>
+                <th class="cell" id="7" onclick="gameModule.draw(this);"></th>
+                <th class="cell" id="8" onclick="gameModule.draw(this);"></th>
+                <th class="cell" id="9" onclick="gameModule.draw(this);"></th>
+            </tr>
+        </table>
+    </div>
+    <div id="statistics_div">
+        <table id="tableOfStatistics" class="statistics">
+            <tr>
+                <th class="statistic">Number of turn</th>
+                <th class="statistic">Player X</th>
+                <th class="statistic">Player O</th>
+                <th class="statistic">Draw</th>
+            </tr>
+            <tr id="sum_line">
+                <th class="statistic">Sum</th>
+                <th class="statistic" id="player_X_sum"></th>
+                <th class="statistic" id="player_O_sum"></th>
+                <th class="statistic" id="draw_sum"></th>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
